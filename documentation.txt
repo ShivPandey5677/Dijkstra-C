@@ -1,0 +1,66 @@
+Dijkstra Algorithm Implementation
+
+Overview
+
+This C program implements Dijkstra's shortest path algorithm using an adjacency matrix to represent the graph. The program supports reading the adjacency matrix from CSV files and generating output files with the shortest path results. It also provides functionality for reading and printing via the terminal.
+
+Current Features
+
+Dijkstra's Algorithm: Computes shortest paths from a starting node to all other nodes in a directed or bidirectional graph.
+File Input/Output: Supports reading adjacency matrices from CSV files and writing output to files. It also supports terminal input and output.
+Graph Visualization: Generates graphical representations of the computed shortest path using Graphviz.
+Usages: Allows non-verbose execution ideal for automated testing with multiple files.
+Dependencies
+
+Graphviz: Required for generating graph images. The dot command from the Graphviz package is used for this purpose. If Graphviz is not installed, the image will not be generated.
+Compiling
+
+Create Folder Structure: Use make folders to set up the necessary directories.
+Compile and Link: Use make to compile and link the program.
+go
+Copy code
+make folders
+make
+Usages
+
+Terminal Input/Output:
+
+bash
+Copy code
+./program
+Prompts for adjacency matrix input and outputs results to the terminal.
+
+File Input/Output:
+
+bash
+Copy code
+./program <input_csv_filename>
+Reads the adjacency matrix from input_csv_filename and outputs results to the terminal.
+
+php
+Copy code
+./program <input_csv_filename> <output_filename>
+Reads the adjacency matrix from input_csv_filename and writes results to output_filename.
+
+Non-Verbose Execution:
+
+php
+Copy code
+./program <input_csv_filename> <output_filename> <starting_node> <target_node>
+Performs the computation with minimal output. starting_node and target_node specify the nodes for the shortest path computation.
+
+Files and Interfaces
+
+dijkstra.h: Contains the implementation of the Dijkstra algorithm. Reusable for various projects.
+IO_dijkstra.h: Provides utilities for reading input and printing output, both via terminal and files.
+graph_drawer.h: Interfaces with Graphviz to generate graphical representations of the shortest paths.
+Example Graph Output
+
+Graphviz Dependencies: Ensure Graphviz is installed to view graphical outputs.
+Graph Shortest Path Example: See the generated images for visual representations of shortest paths.
+Credits
+
+Developed for the course Fondamenti di Informatica, Università Degli Studi di Firenze.
+License
+
+The Unlicense: This software is released into the public domain. No rights reserved.
